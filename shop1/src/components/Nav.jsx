@@ -2,9 +2,9 @@ import { Outlet, Link } from 'react-router-dom'
 function Nav() {
     return(
         <>
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
           <div className="container-fluid">
-            <a className="navbar-brand" href="javascript:void(0)">Logo</a>
+            <a className="navbar-brand" href="/images/Shopify.webp">Logo</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
               <span className="navbar-toggler-icon"></span>
             </button>
