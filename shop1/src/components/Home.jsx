@@ -30,8 +30,38 @@ function Home(){
                     </div>
                 ))}
             </div>
+            {add ?(
+                <ViewProduct
+                    currentProduct = {currentProduct}
+                    />
+                ):console.log('view Product  ')};
         </div>
         </>
     )
 }
+
+const ViewProduct=(currentProducts) =>{
+    const [product,setProduct]= useState(currentProducts)
+    document.getElementById('a1').style.display='none'
+    return (
+        <div className='container'>
+        <div className='row g-4'>
+        <div className='col-lg-6 d-flex justify-content-center'>
+        <img src={product.currentProduct.image}alt='' className='img-fluid col-lg-12 w-75'/>
+        </div>
+        <div className='desc col-lg-6'>
+            <h2>{product.currentProduct.p_name}</h2>
+            <p>{product.currentProduct.description}</p>
+            <p>${product.currentProduct.price}</p>
+            <div className='row'>
+                <button className='btn btn-warning col-lg-10'>Add to cart</button>
+                <button className='btn btn-success col-lg-10 mt-1'>BUY now</button>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    )
+}
+
 export default Home

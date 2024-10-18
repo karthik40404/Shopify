@@ -1,5 +1,8 @@
 import { Outlet, Link } from 'react-router-dom'
 function Nav() {
+  const handleClick = () => {
+    window.location.reload(Home)
+  }
     return(
         <>
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
@@ -11,7 +14,7 @@ function Nav() {
             <div className="collapse navbar-collapse" id="mynavbar">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/" onClick={handleClick} >Home</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">About</Link>
